@@ -1,13 +1,17 @@
 /* Universal selector */
 * {
-    color: darkgoldenrod;
-    font-style: italic;
-    background-color: darkblue;
+    color: #4e4376;
+    /* font-style: italic; */
+    background-color: #2caee2;
+    margin: 0px;
+    padding: 0px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* tags and elements selector */
 h1 {
     text-align: center;
+    background-color: burlywood;
 }
 
 /* Attribute selector */
@@ -58,4 +62,149 @@ a:active{
 }
 a:visited {
     color: chartreuse;
+}
+ /* target */
+ :target {
+    color: blue;
+    border: 2px solid red;
+ }
+ div:target {
+    color: black;
+    border: 5px solid rgb(9, 8, 8);
+ }
+ /* border */
+.borderone,.bordertwo {
+    border: 8px dotted rgb(25, 186, 14);
+}
+.borderstyle {}
+.borercolor {}
+.borderwidth {}
+
+/* Margin */
+.marginone {
+    border: 2px solid green;
+    margin: 40px;
+    background-color: darkcyan;
+    padding: 20px;
+}
+.margintwo {
+    /* margin: 50px 50px 50px 50px; */
+    margin-top: 50px;
+    border: 2px solid greenyellow;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: darkolivegreen;
+    padding: 50px;
+}
+/* inline */
+.inline {
+    border: 1px solid black;
+    width: 400px;
+    display: inline-block;
+    /* display: block; */
+}
+.block {
+    border: 1px solid yellow;
+    width: 400px;
+    display: inline-block;
+    /* display:inline; */
+}
+/* float left and right */
+.float_left img {
+    width: 40%;
+    float: left;
+}
+.clear {
+    clear: both;
+}
+.float_right img {
+    width: 40%;
+    float: right;
+}
+
+/* Grid Lesson */
+
+.girdone div {
+    text-align: center;
+    padding: 20px;
+    /* grid-gap: 20px; */
+}
+.girdone {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+}
+.gird2 div,.gridcol,.gridrow {
+    text-align: center;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* grid-gap: 20px; */
+}
+.gird2 {
+    display: grid;
+    grid-template-columns: 100px 50px 150px;
+    grid-gap: 20px;
+    /* grid-column gap:;
+    grid-row gap:; */
+}
+.gridcol div,.gridrow div{
+    align-items: center;
+    padding: 30px;
+    display: grid;
+}
+ 
+.col1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.row2 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+/* Position */
+.relative1 {
+    border: 5px solid yellowgreen;
+    width: 500px;
+    height: 500px;
+}
+.relative2 {
+    border: 3px solid red;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+.absolute1 {
+    border: 5px solid yellowgreen;
+    width: 500px;
+    height: 500px;
+}
+.absolute2 {
+    border: 3px solid rgb(166, 0, 255);
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+.Fixed {
+    position: fixed;
+    border: 8px solid rgb(43, 171, 226);
+    top: 300px;
+    left: 500px;
+}
+/* Font */
+@font-face {
+    font-family: simple;
+    src: url(/CSS_lesson/FontBundles/Bricklane-Regular.ttf);
+}
+.offline {
+    font-family: simple;
+}
+.online{
+    font-family: 'Indie Flower', cursive;
 }
