@@ -862,3 +862,98 @@ background-color: #ddd;
     background-color: aquamarine;
 } */
 /* login end */
+/* product detail start....... */
+.detail_img2 img {
+    width: 160px;
+    margin: 10px 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+    transition: 0.4s;
+    overflow: hidden;
+}
+.detail_img2 img:hover{
+    transform: scale(1.2);
+}
+.detail_img img {
+    width: 700px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+    transition: 0.4s;
+}
+.product-info {
+    margin-left: 0;
+}
+.detail_container {
+    width: 100%;
+}
+.detail_img2 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+.detail_container {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+.product-info {
+    width: 20%;
+    padding-top: 80px;
+    transition: 0.4s;
+    font-size: 20px;
+    line-height: 45px;
+    margin-left: -200px;
+    text-align: start;
+    margin-top: -80px;
+}
+.detail_img {
+    width: 60%;
+}
+.product-info .p_nav span a {
+    color:gray;
+    transition: 0.4s;
+}
+.product-info .p_nav span a:hover {
+    color:var(--main_color);
+}
+.product-info h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.checked {
+    color: orange;
+}
+.product-info p span {
+    font-size: 25px;
+}
+form input {
+    width: 50px;
+    padding: 10px;
+    font-size: 20px;
+}
+form button {
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--main_color);
+    color: white;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+form button:hover {
+    background-color: white;
+    color: black;
+}
+.detail_sub {
+    float: right;
+    position: absolute;
+    top: 250px;
+    left: 1500px;
+    height: 400px;
+}
+/* product detail end */
