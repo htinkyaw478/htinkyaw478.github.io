@@ -207,7 +207,7 @@ a {
 .product_content {
     position: relative;
   bottom: 130px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 .product_content h2 {
     margin-bottom: 5px;
@@ -957,3 +957,9 @@ form button:hover {
     height: 400px;
 }
 /* product detail end */
+.promotion_container .product_box .pro_price {
+    color: red;
+}
+.pro {
+    text-decoration: line-through;
+}
