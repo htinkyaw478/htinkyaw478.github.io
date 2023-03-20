@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Result</title>
+    <style>
+        form input {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exam Result</h1>
+    <form name="myForm">
+        <label for="Name">Name</label>
+        <input type="text" name="name" id="Name">
+        <label for="Myanmar">Myanmar</label>
+        <input type="number" name="myanmar" id="Myanmar">
+        <label for="English">English</label>
+        <input type="number" name="english" id="English">
+        <label for="Math">Math</label>
+        <input type="number" name="math" id="Math">
+        <label for="Physic">Physic</label>
+        <input type="number" name="physic" id="Physic">
+        <label for="Chemistry">Chemistry</label>
+        <input type="number" name="chemistry" id="Chemistry">
+        <label for="Bio">Bio</label>
+        <input type="number" name="bio" id="Bio">
+        <br>
+    <button type="button" onclick="result()">Result</button>
+    </form>
+    
+    <script>
+        function result(){
+            // alert('ok')
+            let name=document.myForm.name.value;
+            let myanmar= document.myForm.myanmar.value;
+            let english= document.myForm.english.value;
+            let math= document.myForm.math.value;
+            let physic= document.myForm.physic.value;
+            let chemistry= document.myForm.chemistry.value;
+            let bio= document.myForm.bio.value;
+            
+            if (myanmar >=40 && myanmar<79 && english >=40 && english<79 && math >=40 && math<79 && physic >=40 && physic<79 && chemistry >=40 && chemistry<79 && bio >=40 && bio<79){
+                document.write(name+' '+"is simple passed")
+            }
+            else if (myanmar >=80 && myanmar<100 && english >=40 && english<79 && math >=40 && math<79 && physic >=40 && physic<79 && chemistry >=40 && chemistry<79 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed and myanmar distinction")
+            }
+            else if (myanmar >=80 && myanmar<79 && english >=80 && english<100 && math >=40 && math<79 && physic >=40 && physic<79 && chemistry >=40 && chemistry<79 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed and english distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=40 && english<79 && math >=80 && math<100 && physic >=40 && physic<79 && chemistry >=40 && chemistry<79 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed and math distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=40 && english<79 && math >=40 && math<79 && physic >=80 && physic<100 && chemistry >=40 && chemistry<79 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed and physic distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=40 && english<79 && math >=40 && math<79 && physic >=40 && physic<79 && chemistry >=80 && chemistry<100 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed and chemistry distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=40 && english<79 && math >=40 && math<79 && physic >=40 && physic<79 && chemistry >=40 && chemistry<79 && bio >=80 && bio<100){
+                document.write(name+' '+"is passed and bio distinction")
+            }
+            else if (myanmar >=80 && myanmar<100 && english >=80 && english<100 && math >=40 && math<79 && physic >=40 && physic<79 && chemistry >=40 && chemistry<79 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed and myanmar and english distinction")
+            }
+            else if (myanmar >=80 && myanmar<100 && english >=40 && english<79 && math >=80 && math<100 && physic >=40 && physic<79 && chemistry >=40 && chemistry<79 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed and myanmar and math distinction")
+            }
+            else if (myanmar >=80 && myanmar<100 && english >=40 && english<79 && math >=40 && math<79 && physic >=80 && physic<100 && chemistry >=40 && chemistry<79 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed myanmar and physic distinction")
+            }
+            else if (myanmar >=80 && myanmar<100 && english >=40 && english<79 && math >=40 && math<79 && physic >=40 && physic<79 && chemistry >=80 && chemistry<100 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed myanmar and chemistry distinction")
+            }
+            else if (myanmar >=80 && myanmar<100 && english >=40 && english<79 && math >=40 && math<79 && physic >=40 && physic<79 && chemistry >=40 && chemistry<79 && bio >=80 && bio<100){
+                document.write(name+' '+"is passed myanmar and bio distinction")
+            }
+            else if (myanmar >=80 && myanmar<100 && english >=80 && english<100 && math >=80 && math<100 && physic >=40 && physic<79 && chemistry >=40 && chemistry<79 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed and myanmar , english and math distinction")
+            }
+            else if (myanmar >=80 && myanmar<100 && english >=80 && english<100 && math >=80 && math<100 && physic >=80 && physic<100 && chemistry >=40 && chemistry<79 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed and myanmar , english , math and physic distinction")
+            }
+            else if (myanmar >=80 && myanmar<100 && english >=80 && english<100 && math >=80 && math<100 && physic >=80 && physic<100 && chemistry >=80 && chemistry<100 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed myanmar , english , math and physic and chemistry distinction")
+            }
+            else if (myanmar >=80 && myanmar<100 && english >=80 && english<100 && math >=80 && math<100 && physic >=80 && physic<100 && chemistry >=80 && chemistry<100 && bio >=80 && bio<100){
+                document.write(name+' '+"is passed .All distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=80 && english<100 && math >=80 && math<100 && physic >=80 && physic<100 && chemistry >=80 && chemistry<100 && bio >=80 && bio<100){
+                document.write(name+' '+"is passed .bio , english , math and physic and chemistry distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=40 && english<79 && math >=80 && math<100 && physic >=80 && physic<100 && chemistry >=80 && chemistry<100 && bio >=80 && bio<100){
+                document.write(name+' '+"is passed .bio  math and physic and chemistry distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=40 && english<79 && math >=40 && math<79 && physic >=80 && physic<100 && chemistry >=80 && chemistry<100 && bio >=80 && bio<100){
+                document.write(name+' '+"is passed .bio  and physic and chemistry distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=40 && english<79 && math >=40 && math<79 && physic >=40 && physic<79 && chemistry >=80 && chemistry<100 && bio >=80 && bio<100){
+                document.write(name+' '+"is passed .bio , and chemistry distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=80 && english<100 && math >=80 && math<100 && physic >=40 && physic<79 && chemistry >=40 && chemistry<79 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed and english and math distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=80 && english<100 && math >=40 && math<79 && physic >=80 && physic<100 && chemistry >=40 && chemistry<79 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed and english and physic distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=80 && english<100 && math >=40 && math<79 && physic >=40 && physic<79 && chemistry >=80 && chemistry<100 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed and english ,chemistry distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=80 && english<100 && math >=40 && math<79 && physic >=40 && physic<79 && chemistry >=40 && chemistry<79 && bio >=80 && bio<100){
+                document.write(name+' '+"is passed and english ,bio distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=40 && english<79 && math >=80 && math<100 && physic >=80 && physic<100 && chemistry >=40 && chemistry<79 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed and math , physic distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=40 && english<79 && math >=80 && math<100 && physic >=40 && physic<79 && chemistry >=80 && chemistry<100 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed and math , chemistry distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=40 && english<79 && math >=80 && math<100 && physic >=40 && physic<79 && chemistry >=40 && chemistry<79 && bio >=80 && bio<100){
+                document.write(name+' '+"is passed and math , bio distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=40 && english<79 && math >=40 && math<79 && physic >=80 && physic<100 && chemistry >=80 && chemistry<100 && bio >=40 && bio<79){
+                document.write(name+' '+"is passed and  physic ,chemistry distinction")
+            }
+            else if (myanmar >=40 && myanmar<79 && english >=40 && english<79 && math >=40 && math<79 && physic >=40 && physic<79 && chemistry >=80 && chemistry<100 && bio >=80 && bio<100){
+                document.write(name+' '+"is passed and chemistry , bio distinction")
+            }
+            else{
+                document.write(name+' '+"is failed")
+            }
+        }
+       
+        
+        
+    </script>
+</body>
+</html>

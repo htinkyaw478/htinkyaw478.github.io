@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form input {
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Daily Usage</h1>
+    <form action="" name="myForm" class="box">
+        <label for="date" style="color: brown;">Date</label>
+        <input type="date" name="date" placeholder="Date"> 
+        <label for="name" style="color: brown;">Name</label>
+        <input type="text" name="name"> 
+        <label for="price" style="color: brown;">Price</label>
+        <input type="number" name="price"> <br>
+        <button type="button" onclick="showData()" style="color: brown;">Register</button>
+    </form>
+
+    <h1>Expense List</h1>
+    <table border="1" cellpadding="20" cellspacing="0">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Date</th>
+                <th>name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" align="right">Total</td>
+                <td id="total"></td>
+           </tr>
+        </tfoot>
+    </table>
+
+
+    <script>
+        var total=0;
+        var expenseListArray=[];
+        var finalPriceArray=[];
+        
+        function showData() { 
+
+            //get data from form
+            let date=document.myForm.date.value;
+            let name=document.myForm.name.value;
+            let price=document.myForm.price.value;
+            // console.log(name,age,city)
+
+            let expense={
+                date : date,
+                name : name,
+                price :price
+            }
+            expenseListArray.push(expense);
+            console.log(expenseListArray);
+            showExpense();
+        }
+
+        function showExpense() { 
+            let html='';
+            var total=0;
+            for (let i = 0; i < expenseListArray.length; i++) {
+                console.log(expenseListArray[i]);
+                let expenseObject=expenseListArray[i];
+                html +=`<tr>
+                                <td>${i+1}</td>
+                                <td>${expenseObject.date}</td>
+                                <td>${expenseObject.name}</td>
+                                <td>${expenseObject.price}</td>
+                            </tr>`;
+                            console.log(expenseObject.price);
+                            total+=parseInt(expenseObject.price) ;
+                            console.log(total); 
+            }
+            
+            document.getElementById('tbody').innerHTML=html;
+            document.getElementById('total').innerHTML=total;
+        }
+        
+    </script>
+</body>
+</html>
