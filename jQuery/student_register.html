@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Student Register</h1>
+    Name: <input type="text" id="name" name="name"><br><br>
+    Email: <input type="email" name="email" id="email"><br><br>
+    Phone: <input type="number" name="phone" id="phone"><br><br>
+    Year: <select name="year" id="year">
+        <option value="">Choose Year</option>
+          <option value="First Year">First Year</option>
+          <option value="Second Year">Second Year</option>
+          <option value="Third Year">Third Year</option>
+    </select><br><br>
+    <button id="add">Add Student</button>
+     
+    <h3>Register</h3>
+    <table border="1" cellspacing="0" cellpadding="20">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Year</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    <script src="jquery.min.js"></script>
+    <script>
+
+        function getData(){
+            let stuString= localStorage.getItem("htinkyaw");
+            if(stuString){
+                let stuArray = JSON.parse(stuString);
+            let data = '';
+            let i = 1;
+            $.each(stuArray,function(i,v){
+                data += `<tr>
+                    <td>${i++}</td>
+                    <td>${v.stu_name}</td>
+                    <td>${v.stu_email}</td>
+                    <td>${v.stu_phone}</td>
+                    <td>${v.stu_year}</td>
+                    </tr>`;
+            })
+            $('#tbody').html(data);
+            }
+            
+        }
+
+        $(document).ready(function(){
+          let data='';
+          let i=1;
+          $('#add').click(function(){
+            let name=$('#name').val();
+            let email=$('#email').val();
+            let phone=$('#phone').val();
+            let year=$('#year').val();
+            
+            let students_obj = {
+                stu_name: name,
+                stu_email: email,
+                stu_phone: phone,
+                stu_year: year
+            }
+
+            let stuString = localStorage.getItem("htinkyaw");
+            let stuArray;
+            if(stuString == null){
+                stuArray= [];
+            } else {
+                stuArray = JSON.parse(stuString);
+            }
+            stuArray.push(students_obj);
+
+            let stuData= JSON.stringify(stuArray);
+            localStorage.setItem('htinkyaw',stuData);
+            getData();
+          })
+           
+        })
+    </script>
+</body>
+</html>

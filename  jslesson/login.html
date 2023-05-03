@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/ jslesson/fontawesome/css/all.min.css">
+    <script src="/ jslesson/fontawesome/js/all.min.js"></script>
+    <style>
+        input{
+            display: block;
+            margin: 5px 0;
+            width: 250px;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        .form{
+            /* position: relative; */
+            width: 500px;
+            height: 500px;
+            background-color: rgb(71, 188, 242);
+            margin: auto;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            text-align: center;
+            position: relative;
+            top: 130px;
+            /* right: 5px; */
+            left: 10px;
+            /* margin-bottom: -100px; */
+        }
+        .error {
+            color: red;
+            font-size: 13px;
+        }
+        #input_control.success input {
+             border: 1px solid green;
+        }
+        #input_control.error input {
+            border: 1px solid red;
+        }
+        .eye_close {
+            position: relative;
+            top: 28px;
+            left: 170px;
+            cursor: pointer;
+        }
+        .eye_close2 {
+            position: relative;
+            top: 28px;
+            left: 120px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Register</h1>
+    <div class="form" >
+        <form action="/" id="form">
+            <div id="input_control">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter Name" name="name">
+                <div class="error"></div>
+            </div>
+            <div id="input_control">
+               <label for="email">Email:</label>
+               <input type="email" id="email" placeholder="Enter Email" name="email">
+               <div class="error"></div>
+            </div>
+            <div id="input_control">
+                <label for="password">Password:</label><i class="fa-regular fa-eye eye_close" id="eye_icon" onclick="showPassword()"></i>
+                <input type="password" id="password" placeholder="Enter Password" name="password">
+                <div class="error"></div>
+            </div>
+            <div id="input_control">    
+               <label for="r_password">Repeat Password:</label><i class="fa-regular fa-eye eye_close2" id="eye_icon" onclick="reshowPassword()"></i>
+               <input type="password" id="r_password" placeholder="Re_enter Password" name="repassword">
+               <div class="error"></div>
+            </div>
+            <br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script>
+       
+            const name=document.getElementById('name');
+            const email=document.getElementById('email');
+            const password=document.getElementById('password');
+            const repassword=document.getElementById('r_password');
+            const error=document.querySelector('.error');
+
+            form.addEventListener('submit', e => {
+                    e.preventDefault();
+
+                    validateInputs();
+                });
+            const setError = (element,message) => {
+                 const mainElement = element.parentElement;
+                 const errorShow = mainElement.querySelector('.error');
+                 errorShow.innerText = message;
+                //  name.style.border="solid 1px red";
+                 mainElement.classList.add('error');
+                 mainElement.classList.remove('success');
+                //  console.log(element.parentElement);
+            }
+            // setError(name , "hello");
+            const success = (element) => {
+                 const mainElement = element.parentElement;
+                 const errorShow = mainElement.querySelector('.error');
+                 errorShow.innerText = '';
+                //  name.style.border="solid 1px green";
+                 mainElement.classList.remove('error');
+                 mainElement.classList.add('success');
+            }
+            // success(name);
+            
+            let validateInputs =() => {
+
+            const usernameValue = name.value.trim();
+            const emailValue = email.value.trim();
+            const passwordValue = password.value.trim();
+            const password2Value = repassword.value.trim();
+
+                if (usernameValue === ''){
+                    setError(name,"Name is Invalid!")
+                }else {
+                    success(name);
+                }
+                if (emailValue === ''){
+                    setError(email,"Email is Invalid!");
+                }else {
+                    success(email);
+                }
+                if(passwordValue === ''){
+                    setError(password,"Password is Ivalid");
+                }else {
+                    success(password);
+                }
+                if(password2Value !== passwordValue){
+                    setError(r_password,"Password is not match!Please try again! ");
+                }else {
+                    success(r_password);
+                }
+                if(password2Value === ''){
+                    setError(r_password,"Please enter repassword! ");
+                }else {
+                    success(r_password);
+                }
+            }
+        const eyeIcon = document.getElementById('eye_icon');
+        // console.log(eyeIcon);
+         let showPassword =()=> {
+            // alert("hello")
+            if(password.type === "password"){
+                password.type = "text";
+
+            }else{
+                password.type = "password";
+            }
+        }
+        let reshowPassword =()=> {
+            // alert("hello")
+            if(repassword.type === "password"){
+                repassword.type = "text";
+
+            }else{
+                repassword.type = "password";
+            }
+        }
+       
+    </script>
+</body>
+</html>

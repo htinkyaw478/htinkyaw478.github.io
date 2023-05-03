@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias delectus odit perspiciatis, excepturi repellendus consequuntur officiis praesentium doloribus quibusdam similique accusamus aut quidem. Cum quaerat est qui numquam dolorem eos!
+    </p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <button id="fade_out">FadeOut</button>
+    <button id="fade_in">FadeIn</button>
+    <button id="fade_to">FadeTo</button>
+    <button id="fade_to2">FadeTo2</button>
+    <button id="fade_toggle">FadeToggle</button>
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           $('#hide').click(function(){
+            $('p').hide(1000,function(){
+            alert('hide');
+           })
+        })
+
+        $('#show').click(function(){
+            $('p').show(1000,function(){
+            alert('show');
+           })
+        })
+
+       $('#toggle').click(function(){
+        $('p').toggle(1000,function(){
+                alert('toggle');
+            })
+       })
+
+       $('#fade_out').click(function(){
+       $('p').fadeOut("slow",function(){
+        alert('fadeout')
+       })
+       })
+
+       $('#fade_in').click(function(){
+        $('p').fadeIn('slow',function(){
+            alert('fadein');
+        })
+       })
+
+       $("#fade_to").click(function(){
+        $('p').fadeTo(1000,0.1,function(){
+            alert('fadeto');
+        })
+       })
+
+       $("#fade_to2").click(function(){
+        $('p').fadeTo(1000,1,function(){
+            alert('fadeto2');
+        })
+       })
+       $("#fade_toggle").click(function(){
+        $('p').fadeToggle(1000,1,function(){
+            alert('fadeto2');
+        })
+       })
+    })
+    </script>
+</body>
+</html>

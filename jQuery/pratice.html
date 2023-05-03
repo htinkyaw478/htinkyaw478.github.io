@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <!-- add input start!! -->
+    <div id="addStudent">
+
+        <h1>Student Register</h1>
+        
+      Name:  <input type="text" id="name" name="name"><br><br>
+
+      Email: <input type="email" name="email" id="email"><br><br>
+
+      Phone: <input type="number" name="phone" id="phone"><br><br>
+
+      Year:  <select name="year" id="year">
+                 <option value="">Choose Year</option>
+                 <option value="First Year">First Year</option>
+                 <option value="Second Year">Second Year</option>
+                 <option value="Third Year">Third Year</option>
+             </select><br><br>
+
+                <button id="add">Add Student</button>
+    </div>  
+    <!-- add input end!! -->
+   <!-- edit input start !!!-->
+     <div id="updateStudent">
+
+                <h1>Update Student Register</h1>
+
+               <input type="hidden" id="index" name="index">
+
+         Name: <input type="text" id="edit_name" name="name"><br><br>
+
+         Email:<input type="email" name="email" id="edit_email"><br><br>
+
+         Phone:<input type="number" name="phone" id="edit_phone"><br><br>
+
+         Year: <select name="year" id="edit_year">
+                   <option value="">Choose Year</option>
+                   <option value="First Year">First Year</option>
+                   <option value="Second Year">Second Year</option>
+                   <option value="Third Year">Third Year</option>
+               </select><br><br>
+
+               <button id="update">Update Student</button>
+     </div>
+    <!-- edit input end!!! -->
+    <!-- table start!! -->
+    <h3>Register</h3>
+
+    <table border="1" cellspacing="0" cellpadding="20">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Year</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    <!-- table end!! -->
+
+    <!-- Jquery start!!1 -->
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // hide edit mode in early....>>
+            $('#updateStudent').hide();
+           
+            // Webpage reload open in ready...>>> 
+            getFinal_data();
+
+            $('#add').click(function(){
+            let name = $('#name').val();
+            let email = $('#email').val();
+            let phone = $('#phone').val();
+            let year = $('#year').val();
+            
+            let dataObj = {
+                stu_name: name,
+                stu_email: email,
+                stu_phone: phone,
+                stu_year: year,
+            }
+            
+            let stu_data = localStorage.getItem("students");
+            let stuArray;
+            if(stu_data == null){
+                  stuArray = [];
+            }
+            else {
+                stuArray = JSON.parse(stu_data);
+            }
+            stuArray.push(dataObj);
+            
+            let stu_list = JSON.stringify(stuArray);
+            
+            let stu_local = localStorage.setItem("students",stu_list);
+
+            getFinal_data();
+
+            })
+
+            //  getFinal_data function start.....>>>
+            function getFinal_data(){
+                let stu_data= localStorage.getItem("students");
+                if(stu_data){
+                    let stuArray = JSON.parse(stu_data);
+                    let data = '';
+                    let i = 1 ;
+                    $.each(stuArray,function(k,v){
+                        data += `<tr>
+                            <td>${i++}</td>
+                            <td>${v.stu_name}</td>
+                            <td>${v.stu_email}</td>
+                            <td>${v.stu_phone}</td>
+                            <td>${v.stu_year}</td>
+                            <td> <button class="edit" data-index='${k}' data-name='${v.stu_name}' data-email='${v.stu_email}' data-phone='${v.stu_phone}' data-year='${v.stu_year}'>Edit</button> <button class="delect" data-id="${k}">Delect</button></td>
+                            </tr>`
+                    })
+                    $('#tbody').html(data);
+                }
+            }
+            // getFinal_data function end!!!!...>>>>>
+            // delect action start ...>>>//
+            $('#tbody').on('click','.delect', function(){
+                let id = $(this).data('id');
+                
+                let ans = confirm("Are you sure delect?");
+                if(ans){
+                    let stuString = localStorage.getItem('students');
+                    if(stuString) {
+                        let stuArray = JSON.parse(stuString);
+                        stuArray.splice(id , 1);
+                        let stuData = JSON.stringify(stuArray);
+                        localStorage.setItem('students',stuData);
+                        getFinal_data();
+                    }
+                }
+            })
+            // delect action end....//
+            // edit start...///
+            $('#tbody').on('click','.edit',function(){
+
+                $('#updateStudent').show();
+                $('#addStudent').hide();
+
+                let index = $(this).data('index');
+                let name = $(this).data('name');
+                let email = $(this).data('email');
+                let phone = $(this).data('phone');
+                let year = $(this).data('year');
+                
+                $('#index').val(index);
+                $('#edit_name').val(name);
+                $('#edit_email').val(email);
+                $('#edit_phone').val(phone);
+                $('#edit_year').val(year);
+            })
+            // Edit action end!!!...>>>>
+            // Update button action start!!!>>>>
+            $('#update').click (function(){
+
+                var upd_index = $('#index').val();
+                var upd_name = $('#edit_name').val();
+                var upd_email = $('#edit_email').val();
+                var upd_phone = $('#edit_phone').val();
+                var upd_year = $('#edit_year').val();
+                
+                let stuString = localStorage.getItem('students');
+
+                if(stuString){
+                    let stuArray = JSON.parse(stuString);
+            
+                    stuArray[upd_index].stu_name = upd_name;
+                    stuArray[upd_index].stu_email = upd_email;
+                    stuArray[upd_index].stu_phone = upd_phone;
+                    stuArray[upd_index].stu_year = upd_year;
+
+                    let stuData = JSON.stringify(stuArray);
+                    localStorage.setItem('students',stuData);
+
+                    getFinal_data();
+                    $('#updateStudent').hide();
+                    $('#addStudent').show();
+                }
+
+            })
+            // Updat button action end!!!!>>>>>
+            // Edit and update action end...!!!>>>>
+        })
+    </script>
+</body>
+</html>

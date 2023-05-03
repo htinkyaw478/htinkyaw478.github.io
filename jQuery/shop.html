@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="./shop.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <script src="./fontawesome/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav_list">
+                <li class="nav_icon"><a href="#">IT Shop</a></li>
+                <li class="home"><a href="#">Home</a><span class="icon_bg"><a href="checkout.html"><i class="fa-solid fa-cart-shopping cart_icon"></i></a></span><span id="count_number"></span></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="product_container">
+            <div class="product_list">
+                <img src="./image/laptop1.jpeg" alt="" class="list_1">
+                <div class="item_content1">
+                    <h3 class="name">Laptop1</h3>
+                <p class="price">Price: 2300000MMK</p>
+                <button class="add_cart" data-id="item1" data-name="Laptop1" data-price="2300000">Add to Cart</button>
+                </div>                
+            </div>
+            <div class="product_list">
+                <img src="./image/laptop2.jpeg" alt="" class="list_1">
+                <div class="item_content2">
+                    <h3 class="name">Laptop2</h3>
+                    <p class="price">Price: 2300000MMK</p>
+                    <button class="add_cart" data-id="item2" data-name="Laptop2" data-price="2000000">Add to Cart</button>
+                </div>               
+            </div>
+            <div class="product_list">
+                <img src="./image/laptop3.jpg" alt="" class="list_1">
+                <div class="item_content3">
+                    <h3 class="name">Laptop3</h3>
+                    <p class="price">Price: 2300000MMK</p>
+                    <button class="add_cart" data-id="item3" data-name="Laptop3" data-price="23000000">Add to Cart</button>
+                </div>               
+            </div>
+            <div class="product_list">
+                <img src="./image/laptop4.jpg" alt="" class="list_1">
+                <div class="item_content4">
+                    <h3 class="name">Laptop4</h3>
+                    <p class="price">Price: 2300000MMK</p>
+                    <button class="add_cart" data-id="item4" data-name="Laptop4" data-price="23000000">Add to Cart</button>
+                </div>                
+            </div>
+            <div class="product_list">
+                <img src="./image/iphone1.png" alt="" class="list_1">
+                <div class="item_content5">
+                    <h3 class="name">Iphone1</h3>
+                    <p class="price">Price: 2300000MMK</p>
+                    <button class="add_cart" data-id="item5" data-name="Iphone1" data-price="23000000">Add to Cart</button>
+                </div>                
+            </div>
+            <div class="product_list">
+                <img src="./image/iphone1.png" alt="" class="list_1">
+                <div class="item_content6">
+                    <h3 class="name">Iphone2</h3>
+                    <p class="price">Price: 2300000MMK</p>
+                    <button class="add_cart" data-id="item6" data-name="Iphone2" data-price="23000000">Add to Cart</button>
+                </div>                
+            </div>
+            <div class="product_list">
+                <img src="./image/iphone1.png" alt="" class="list_1">
+                <div class="item_content7">
+                    <h3 class="name">Iphone3</h3>
+                    <p class="price">Price: 2300000MMK</p>
+                    <button class="add_cart" data-id="item7" data-name="Iphone3" data-price="40000000">Add to Cart</button>
+                </div>               
+            </div>
+            <div class="product_list">
+                <img src="./image/iphone1.png" alt="" class="list_1">
+                <div class="item_content8">
+                    <h3 class="name">Iphone4</h3>
+                    <p class="price">Price: 2300000MMK</p>
+                    <button class="add_cart" data-id="item8" data-name="Iphone4" data-price="42000000">Add to Cart</button>
+                </div>                
+            </div>
+        </div>
+    </main>
+    <script src="./jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            count();
+            function count() {
+                let itemString = localStorage.getItem('items');
+                if(itemString){
+                    let itemArray = JSON.parse(itemString);
+                    if(itemArray != null)$('#count_number').text(itemArray.length);
+                }else $('#count_number').text('0');
+
+            }
+            $('.add_cart').click(function(){
+                // alert('hello');
+                let item_id = $(this).data('id');
+                let item_name = $(this).data('name');
+                let item_price = $(this).data('price');
+
+                let shop_items = {
+                    id : item_id,
+                    name : item_name,
+                    price : item_price,
+                    qty : 1    
+                }
+                 
+                let itemString = localStorage.getItem('items');
+                let itemArray;
+                if(itemString == null)itemArray = []
+                else itemArray = JSON.parse(itemString);
+
+                let status = false;
+                $.each(itemArray, function(i , v){
+                    if(item_id == v.id){
+                        status = true ;
+                        v.qty++;
+                    }
+                })
+                if (status == false) itemArray.push(shop_items);
+                
+
+                let itemsData = JSON.stringify(itemArray);
+                localStorage.setItem('items',itemsData)
+                count();
+            })
+        });
+    </script>
+</body>
+</html>

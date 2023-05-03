@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="./shop.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <script src="./fontawesome/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav_list">
+                <li class="nav_icon"><a href="shop.html">IT Shop</a></li>
+                <li class="home"><a href="shop.html">Home</a><span class="icon_bg"><a href="checkout.html"><i class="fa-solid fa-cart-shopping cart_icon"></i></a></span><span id="count_number"></span></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="cart_amount">
+        <table border="1" cellspacing="0" cellpadding="25">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                    <th>Item Qty</th>
+                    <th>Total Amount</th>
+                </tr>
+            </thead>
+            <tbody id="item_body">
+
+            </tbody>
+        </table>
+        <br>
+        <div class="order_btn">
+            <button id="order">Order Now</button>
+        </div>
+    </main>
+    
+    <script src="../jquery.min.js"></script>
+    <script src="../count.js"></script>
+    <script>
+       $(document).ready(function () {
+        function getdata()
+       });
+    </script>
+</body>
+</html>
