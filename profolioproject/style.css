@@ -280,6 +280,9 @@
         overflow: hidden;
 
     }
+    .profolio ul li button {
+        color: white;
+    }
     .profolio img {
         transition: transform 0.5s ease;
         
@@ -289,7 +292,7 @@
         cursor: zoom-in;
         border-radius: 5px;
     }
-    .protfolio_title{
+    /* .protfolio_title{
         font-size: 50px;
             font-weight: 600;
             background-image: linear-gradient(to right, #553c9a 45%, #ee4b2b);
@@ -298,7 +301,8 @@
             background-clip: text;
             -webkit-background-clip: text;
             margin-top: 30px;
-    }
+            border: 3px solid white;
+    } */
     /* =================Portfolio end=========== */
 
     /* =================team start ============== */
@@ -424,6 +428,7 @@
             background-image: url(./image/banners4.jpeg);
         }
         .team_title{
+            width: 30%;
             font-size: 50px;
                 font-weight: 600;
                 background-image: linear-gradient(to right, #553c9a 45%, #ee4b2b);
@@ -432,5 +437,175 @@
                 background-clip: text;
                 -webkit-background-clip: text;
                 margin-top: 30px;
+                border-bottom: 2.5px solid white;
+                margin: 0 auto;
+                border-style: ridge;
+                border-radius: 5px;
+                border-width: 3px;
+                padding: 10px;
+                margin-bottom: 20px;
+                margin-top: 50px;
         }
     /* ================= team end================ */
+         /* ================= review start============ */
+         .review {
+            background-image: url(./image/banners5.jpeg);
+                background-position: center;
+                background-size: cover;
+                color: white;
+         }
+         #review_1 img {
+            border-radius: 50%;
+            border: 4px solid rgb(238, 228, 228);
+            padding: 4px;
+            margin-top: 8%;
+            margin-bottom: 3%;
+         }
+         #review_1 {
+            margin-bottom: 8%;
+            margin-top: 10%;
+         }
+         .star {
+            color: #ffc400;
+            margin-bottom: 2%;
+            font-size: 20px;
+         }
+         /* ================= review end ============== */
+
+         /* ================= faq start=============== */
+         .faq_main {
+            background-image: url(./image/faq11.avif);
+                background-position: center;
+                background-size: cover;
+                /* padding-bottom: -20%; */
+         }
+        /* ================= faq start=============== */
+        .faq_content {
+            /* background: #bdb5b3; */
+            padding-top: 3%;
+            padding-bottom: 20%;
+        }
+        .accordion_box {
+            background-color: rgb(245, 242, 242);
+            /* color: white; */
+            border: none;
+        }
+        .faq_img {
+            /* width: 80%; */
+            padding-top: 5%;
+            padding-left: 10%;
+        }
+        .ff {
+            color: rgb(236, 12, 12) !important;
+        }
+        /* .border-bottoms {
+            border-bottom: 2px solid white;
+            border-bottom-width: 10%;
+            padding-bottom: 2%;
+
+        } */
+        .faq_main form input {
+            width: 40%;
+            margin:0 30%;
+        }
+        .faq_main form a {
+            color: white;
+
+        }
+
+                /* ================= faq end=============== */
+                                .card {
+                                    /* box-sizing: border-box; */
+                                    /* display: flex; */
+                                    /* max-width: 320px; */
+                                    background-color: rgba(255, 255, 255, 1);
+                                    transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+                                }
+                
+                                .card:hover {
+                                    box-shadow: 10px 10px 30px whitesmoke;
+                                }
+                
+                                .date-time-container {
+                                    position: absolute;
+                                    top: 5%;
+                                    left: -10%;
+                                    writing-mode: vertical-rl;
+                                    transform: rotate(180deg);
+                                    padding: 0.5rem;
+                                    color: red;
+                                }
+                
+                                .date-time {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    grid-gap: 1rem;
+                                    gap: 1rem;
+                                    font-size: 0.75rem;
+                                    line-height: 1rem;
+                                    font-weight: 700;
+                                    text-transform: uppercase;
+                                    color: red;
+                                }
+                
+                                .separator {
+                                    width: 1px;
+                                    flex: 1 1 0%;
+                                    background-color: rgba(17, 24, 39, 0.1);
+                                }
+                
+                                .content {
+                                    display: flex;
+                                    flex: 1 1 0%;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                }
+                
+                                .infos {
+                                    border-left: 1px solid rgba(17, 24, 39, 0.1);
+                                    padding: 5px;
+                                }
+                
+                                .title {
+                                    font-weight: 600;
+                                    text-transform: uppercase;
+                                    font-size: 18.72px;
+                                    color: rgba(17, 24, 39, 1);
+                                    text-decoration: none;
+                                    padding: 10px;
+                                }
+                
+                                .description {
+                                    overflow: hidden;
+                                    display: -webkit-box;
+                                    -webkit-box-orient: vertical;
+                                    -webkit-line-clamp: 5;
+                                    line-clamp: 5;
+                                    margin-top: 0.5rem;
+                                    font-size: 0.875rem;
+                                    line-height: 1.25rem;
+                                    color: rgba(55, 65, 81, 1);
+                                }
+                
+                                .action {
+                                    display: block;
+                                    background-color: rgba(253, 224, 71, 1);
+                                    padding: 0.75rem 1.25rem;
+                                    text-align: center;
+                                    font-size: 0.75rem;
+                                    line-height: 1rem;
+                                    font-weight: 700;
+                                    text-transform: uppercase;
+                                    color: rgba(17, 24, 39, 1);
+                                    transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+                                }
+                
+                                .action:hover {
+                                    background-color: rgba(250, 204, 21, 1);
+                                }
+                                .blog {
+                                    background-image: url(./image/banner8.jpeg);
+                                        background-position: center;
+                                        background-size: cover;
+                                }
