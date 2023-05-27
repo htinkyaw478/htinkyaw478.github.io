@@ -34,4 +34,5 @@ $('.counter').counterUp({
     delay: 10,
     time: 5000
 });
+$('a.smooth_scroll').smoothScroll();
 })

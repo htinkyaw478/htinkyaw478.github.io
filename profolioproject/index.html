@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./magnific_popup/magnific-popup.css">
     <link rel="stylesheet" href="./owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="./owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
     <script src="./magnific_popup/jquery.magnific-popup.min.js" type="text/javascript"></script>
     <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -36,14 +37,14 @@
             <div class="collapse navbar-collapse text-center" id="Navcollapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="" class="nav-link me-3 active">Home</a>
+                        <a href="" class="nav-link me-3 active smooth_scroll">Home</a>
                     </li>                    
                         <ul class="navbar-nav"><!-- ==========dropdown start ==========-->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <li class="nav-item dropdown smooth_scroll">
+                                <a class="nav-link dropdown-toggle" href="#services_box" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <li>
-                                        <a class="dropdown-item" href="#">Web Development</a>
+                                        <a class="dropdown-item" href="#services_box">Web Development</a>
                                     </li>
                                     <li class="dropdown dropend">
                                             <a class="dropdown-item dropdown-toggle" href="#" id="multilevelDropdownMenu1" data-bs-toggle="dropdown"aria-haspopup="true" aria-expanded="false">
@@ -51,13 +52,13 @@
                                             </a>
                                         <ul class="dropdown-menu" aria-labelledby="multilevelDropdownMenu1">
                                             <li>
-                                                <a class="dropdown-item" href="#">Android App</a>
+                                                <a class="dropdown-item" href="#services_box">Android App</a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">Ios & Mac App</a>
+                                                <a class="dropdown-item" href="#services_box">Ios & Mac App</a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">Window App</a>
+                                                <a class="dropdown-item" href="#services_box">Window App</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -68,17 +69,20 @@
                             </li>
                         </ul><!--================= dropdown end =============-->
                          <li class="nav-item">
-                            <a href="" class="nav-link me-3">Contact</a>
+                            <a href="#contact" class="nav-link me-3 smooth_scroll">Contact</a>
                         </li>
                          <li class="nav-item">
-                            <a href="" class="nav-link me-3">About</a>
+                            <a href="#teams" class="nav-link me-3 smooth_scroll">Team</a>
                         </li>
-                         <form class="d-flex" role="search">
-                             <input class="form-control me-2 search_input" type="search" placeholder="Find Info..."  aria-label="Search">
-                             <button class="btn btn-light" type="submit">Search</button>
-                         </form>
+                        <li class="nav-item">
+                            <a href="#Gallery" class="nav-link me-3 smooth_scroll">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link me-3 smooth_scroll">About</a>
+                        </li>
+                         
                     <li class="nav-item">
-                        <a href="" class="nav-link ms-3" id="nav_location">Our Location</a>
+                        <a href="#location" class="nav-link ms-3 smooth_scroll" id="nav_location">Our Location</a>
                     </li>
                 </ul>
             </div>
@@ -91,7 +95,7 @@
     <section class="sliders text-center align-items-center" id="slider">
         <div class="slider-overlay">
             <div class="slider-content">
-                <div class="icons text-light">
+                <div class="icons text-light wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">
                     <a href=""><i class="fa-brands fa-android"></i></a>
                     <a href=""><i class="fa-brands fa-windows"></i></a>
                     <a href=""><i class="fa-brands fa-apple"></i></a>
@@ -101,7 +105,7 @@
                 <div class="cta-div">
                     <a href="" class="btn" id="join_btn">CONTACT US!!</a>
                 </div>
-                <div class="social_icons mt-3">
+                <div class="social_icons mt-3 wow slideInRight" data-wow-duration="1s" data-wow-delay="1s">
                     <a href=""><i class="fa-brands fa-facebook"></i></a>
                     <a href=""><i class="fa-brands fa-instagram"></i></a>
                     <a href=""><i class="fa-brands fa-twitter"></i></a>
@@ -117,32 +121,32 @@
 
     <!-- ========== services start=============== -->
     
-    <section class="services  py-5 text-center img-fluid" id="services_box">
+    <section class="services mb-4 pt-5 text-center img-fluid" id="services_box">
         
             <div class="pt-3">
                 <h1 class="team_title fs-1">SERVICE</h1>
                 <p class="mb-2 hh">You can ask the question regarding the issues we will <br> solve that together for sure</p>
             </div>
         
-        <div class="container my-5 p-5">
-            <div class="row mb-5">
-                <div class="col-md-4 mb-4">
-                    <div class="service_box text-center">
+        <div class="container mt-5 p-5">
+            <div class="row ">
+                <div class="col-md-4 col-6 mb-4">
+                    <div class="service_box text-center wow slideInLeft"data-wow-duration="1s" data-wow-delay="1s">
                         <h1><i class="fa-brands fa-slack"></i></h1>
                         <h3>Web Service</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br> Suscipit quis reprehenderit cum inventore aliquid, voluptatibus ipsum necessitatibus vel consequatur quos? Repellendus facere. </p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service_box text-center">
+                <div class="col-md-4 col-6 mb-4">
+                    <div class="service_box text-center wow slideInLeft"data-wow-duration="1s" data-wow-delay="1s">
                         <h1><i class="fa-solid fa-rectangle-ad"></i></h1>
                         <h3>Digital Marketing</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br> Suscipit quis reprehenderit cum inventore aliquid,
                             voluptatibus ipsum necessitatibus vel consequatur quos? Repellendus facere. </p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service_box text-center">
+                <div class="col-md-4 col-6 mb-4">
+                    <div class="service_box text-center wow slideInLeft"data-wow-duration="1s" data-wow-delay="1s">
                         <h1><i class="fa-brands fa-app-store-ios"></i></h1>
                         <h3>Application</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br> Suscipit quis reprehenderit cum inventore aliquid,
@@ -150,18 +154,18 @@
                     </div>
                 </div>
                 
-            </div>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="service_box text-center">
+            
+            
+                <div class="col-md-4 col-6 mb-4">
+                    <div class="service_box text-center wow slideInRight"data-wow-duration="1s" data-wow-delay="1s">
                         <h1><i class="fa-solid fa-wand-magic-sparkles"></i></h1>
                         <h3>API</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br> Suscipit quis reprehenderit cum inventore
                             aliquid, voluptatibus ipsum necessitatibus vel consequatur quos? Repellendus facere. </p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service_box text-center">
+                <div class="col-md-4 col-6 mb-4">
+                    <div class="service_box text-center wow slideInRight"data-wow-duration="1s" data-wow-delay="1s">
                         <h1><i class="fa-solid fa-shield-halved"></i></h1>
                         <h3>Web Design</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br> Suscipit quis reprehenderit cum inventore
@@ -169,8 +173,8 @@
                             voluptatibus ipsum necessitatibus vel consequatur quos? Repellendus facere. </p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service_box text-center">
+                <div class="col-md-4 col-6 mb-4">
+                    <div class="service_box text-center wow slideInRight"data-wow-duration="1s" data-wow-delay="1s">
                         <h1><i class="fa-solid fa-server"></i></h1>
                         <h3>Domain & Hosting</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br> Suscipit quis reprehenderit cum inventore
@@ -178,15 +182,15 @@
                             voluptatibus ipsum necessitatibus vel consequatur quos? Repellendus facere. </p>
                     </div>
                 </div>
-            
             </div>
+            
         </div>
     </section>
 
     <!-- =============services end =============== -->
 
     <!-- =======Profolio start======== -->
-    <section class="profolio mt-4 img-fluid w-100 py-5">
+    <section class="profolio  img-fluid w-100 py-5" id="Gallery">
         <div class="container text-center">
             <div class="pt-3 pb-4">
                 <h1 class="team_title fs-1">GALLERY</h1>
@@ -210,19 +214,19 @@
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-4 prot_img overflow-hidden">
+                            <div class="col-4 prot_img overflow-hidden wow slideInRight"  data-wow-offset="10"  data-wow-iteration="1">
                                 <a href="./image/working.jpeg">
                                     <img src="./image/working.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
                                 
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img overflow-hidden wow slideInRight" data-wow-offset="10" data-wow-iteration="1">
                                 <a href="./image/working5.jpeg">
                                     <img src="./image/working5.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
                                 
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img overflow-hidden wow slideInRight" data-wow-offset="10" data-wow-iteration="1">
                                 <a href="./image/working7.jpeg">
                                     <img src="./image/working7.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
@@ -230,19 +234,19 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img overflow-hidden wow slideInLeft" data-wow-offset="10" data-wow-iteration="1">
                                 <a href="./image/working.jpeg">
                                     <img src="./image/working6.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
                                 
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img overflow-hidden wow slideInLeft" data-wow-offset="10" data-wow-iteration="1">
                                 <a href="./image/working3.jpeg">
                                     <img src="./image/working3.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
                                 
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img overflow-hidden wow slideInLeft" data-wow-offset="10" data-wow-iteration="1">
                                 <a href="./image/working13.jpeg">
                                     <img src="./image/working13.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
@@ -250,19 +254,19 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img overflow-hidden wow slideInRight" data-wow-offset="10" data-wow-iteration="1">
                                 <a href="./image/working4.jpeg">
                                     <img src="./image/working4.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
                                 
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img overflow-hidden wow slideInRight" data-wow-offset="10" data-wow-iteration="1">
                                 <a href="./image/working2.jpeg">
                                     <img src="./image/working2.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
                                 
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img overflow-hidden wow slideInRight" data-wow-offset="10" data-wow-iteration="1">
                                 <a href="./image/working11.jpeg">
                                     <img src="./image/working11.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
@@ -274,19 +278,19 @@
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <a href="./image/working.jpeg">
                                     <img src="./image/working.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
                                 
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <a href="./image/working2.jpeg">
                                     <img src="./image/working2.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
                                 
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <a href="./image/working3.jpeg">
                                     <img src="./image/working3.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
@@ -294,19 +298,19 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <a href="./image/working11.jpeg">
                                     <img src="./image/working11.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
                                 
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <a href="./image/working10.jpeg">
                                     <img src="./image/working10.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
                                 
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <a href="./image/working13.jpeg">
                                     <img src="./image/working13.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
@@ -314,7 +318,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <a href="./image/working7.jpeg">
                                     <img src="./image/working7.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
@@ -326,7 +330,7 @@
                                 </a>
                                 
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <a href="./image/working4.jpeg">
                                     <img src="./image/working4.jpeg" alt="" class="img-fluid mb-3 rounded">
                                 </a>
@@ -338,35 +342,35 @@
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <img src="./image/working.jpeg" alt="" class="img-fluid mb-3 rounded">
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <img src="./image/working2.jpeg" alt="" class="img-fluid mb-3 rounded">
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <img src="./image/working3.jpeg" alt="" class="img-fluid mb-3 rounded">
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <img src="./image/working4.jpeg" alt="" class="img-fluid mb-3 rounded">
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <img src="./image/working5.jpeg" alt="" class="img-fluid mb-3 rounded">
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <img src="./image/working6.jpeg" alt="" class="img-fluid mb-3 rounded">
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <img src="./image/working7.jpeg" alt="" class="img-fluid mb-3 rounded">
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <img src="./image/working10.jpeg" alt="" class="img-fluid mb-3 rounded">
                             </div>
-                            <div class="col-md-4 prot_img">
+                            <div class="col-4 prot_img">
                                 <img src="./image/working11.jpeg" alt="" class="img-fluid mb-3 rounded">
                             </div>
                         </div>
@@ -378,7 +382,7 @@
 
     <!-- =======Profolio end -->
     <!-- ========= Our Team start================ -->
-    <section class="ourteam mt-4 py-5">
+    <section class="ourteam mt-4 py-5" id="teams">
         <div class="container text-center  ">
             <div class="pt-3">
                 <h1 class="team_title fs-1">OUR TEAM</h1>
@@ -386,7 +390,7 @@
             </div>
             
             <div class="row text-center ms-auto container-fluid ">
-                <div class="col-md-12 ">
+                <div class="col-md-12 wow slideInLeft" data-wow-offset="10"  data-wow-iteration="1">
                     <div id="team_members" class="owl-carousel owl-theme">
                         <div id="team_member" class="ps-5">
                             <div class="cardContainer mb-5">
@@ -663,9 +667,9 @@
 
     <!-- ========= our team end=================== -->
     <!-- =============== review start======== -->
-    <section class="review mt-4 pt-5">
+    <section class="review mt-4 pt-5" id="about">
         <div class="container">
-            <div class="pt-3 text-center">
+            <div class="pt-3 text-center wow slideInLeft">
                 <h1 class="team_title fs-1">REVIEW</h1>
                 <p class="mt-4 hh">You can ask the question regarding the issues we will <br> solve that together for sure</p>
             </div>
@@ -679,7 +683,7 @@
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
                     </div>
-                    <div class="carousel-inner">
+                    <div class="carousel-inner wow slideInRight" data-wow-offset="10"  data-wow-iteration="1">
                         <div class="carousel-item active">
                             <div class="col text-center mt-2" id="review_1">
                                
@@ -754,7 +758,7 @@
     <!-- ================ F&Q start ===========-->
     <section class="faq_main text-center mt-4 img-fluid">
         <div class="container">
-            <div class="pt-5">
+            <div class="pt-5 wow slideInLeft">
                 <h1 class="team_title ff border-bottoms fs-1">FAQ</h1>
                 <p class="mb-2 hh">How can i help you?</p>
                 <form class="d-flex" role="search">
@@ -762,7 +766,7 @@
                     <a href="" class=" btn btn-outline-danger"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </form>
             </div>
-            <div class="row pt-5">
+            <div class="row pt-5 wow slideInRight" data-wow-offset="10"  data-wow-iteration="1">
                 <div class="col-md-7 col">
                     <div class="faq_content">
                         <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -872,12 +876,12 @@
     <!-- ================ Blog start =========== -->
     <section class="blog text-center mt-4 img-fluid pb-5">
         <div class="container">
-            <div class="py-3 text-center">
+            <div class="py-3 text-center wow slideInLeft">
                 <h1 class="team_titles fs-1 border-bottom">BLOG</h1>
                 <!-- <p class="mt-4 hh text-bg-info rounded-2">You can ask the question regarding the issues we will <br> solve that together for sure</p> -->
             </div>
             <div class="row">
-                <div class="col-md-3 col-6 mb-2">
+                <div class="col-md-3 col-6 mb-2 wow slideInRight" data-wow-duration="2s" data-wow-delay="1s">
                     <div class="card">
                         <div class="date-time-container">
                             <time class="date-time" datetime="2022-10-10">
@@ -911,7 +915,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-6 mb-2">
+                <div class="col-md-3 col-6 mb-2 wow slideInRight" data-wow-duration="2s" data-wow-delay="1.5s">
                     <div class="card">
                         <div class="date-time-container">
                             <time class="date-time" datetime="2022-10-10">
@@ -945,7 +949,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-6 mb-2">
+                <div class="col-md-3 col-6 mb-2 wow slideInRight" data-wow-duration="2s" data-wow-delay="2s">
                     <div class="card">
                         <div class="date-time-container">
                             <time class="date-time" datetime="2022-10-10">
@@ -979,7 +983,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-6 mb-2">
+                <div class="col-md-3 col-6 mb-2 wow slideInRight" data-wow-duration="2s" data-wow-delay="2.5s">
                     <div class="card">
                         <div class="date-time-container">
                             <time class="date-time" datetime="2022-10-10">
@@ -1021,7 +1025,7 @@
     <section class="count my-4 text text-center img-fluid">
         <div class="container py-5">
             <div class="row">
-                <div class="col-3">
+                <div class="col-3 wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">
                     <div class="count_items">
                         <i class="fa-solid fa-desktop"></i>
                         <h2><span class="counter text-center">3200</span><span>+</span></h2>
@@ -1029,7 +1033,7 @@
                     </div>
                 </div>
                 
-                    <div class="col-3">
+                    <div class="col-3 wow slideInLeft" data-wow-duration="1s" data-wow-delay="1.5s">
                         <div class="count_items">
                             <i class="fa-solid fa-mobile-screen"></i>
                             <h2><span class="counter text-center">3200</span><span>+</span></h2>
@@ -1038,7 +1042,7 @@
                     </div>
                 
                 
-                    <div class="col-3">
+                    <div class="col-3 wow slideInLeft" data-wow-duration="1s" data-wow-delay="2s">
                         <div class="count_items">
                             <i class="fa-brands fa-apple"></i>
                             <h2><span class="counter text-center">3200</span><span>+</span></h2>
@@ -1047,7 +1051,7 @@
                     </div>
                 
                 
-                    <div class="col-3">
+                    <div class="col-3 wow slideInLeft" data-wow-duration="1s" data-wow-delay="2.5s">
                         <div class="count_items">
                             <i class="fa-brands fa-windows"></i>
                             <h2><span class="counter text-center">3200</span><span>+</span></h2>
@@ -1063,11 +1067,11 @@
 
     <!-- /* ============== count end ========= */ -->
     <!-- /* ============== form start ========= */ -->
-    <section class="forms py-5">
+    <section class="forms py-5" id="contact">
         <div class="container text-center">
-            <h1  class="mb-5 text-light border-bottom">LEAVE COMMENT</h1>
+            <h1  class="mb-5 text-light border-bottom mt-5 wow slideInRight">LEAVE COMMENT</h1>
             <div class="row">
-                <div class="col-md-6 text-center mb-4">
+                <div class="col-md-12 text-center mb-4 wow slideInLeft">
                     <div class="cards">
                         <span class="title">Leave a Comment</span>
                         <form class="form">
@@ -1088,21 +1092,112 @@
                     </div>
 
                 </div>
-                <div class="col-md-6 text-center  Map">
+            </div>
+        </div>
+    </section>  
+
+    <!-- /* ============== form end ========= */ -->
+    <!-- ================= location start============= -->
+    <section class="location pt-5">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-4 location_box wow slideInRight" data-wow-duration="1s" data-wow-delay="1s">
+                    <h3><i class="fa-solid fa-location-dot"></i></h3>
+                    <p>[10028] 경기도 김포시 대곶면 석정리 238-11</p>
+                </div>
+                <div class="col-4 location_box wow slideInRight" data-wow-duration="1s" data-wow-delay="1.5s">
+                    <h3><i class="fa-solid fa-envelope"></i></h3>
+                    <p>htinkyaw478@gmail.com</p>
+                </div>
+                <div class="col-4 location_box wow slideInRight" data-wow-duration="1s" data-wow-delay="2s">
+                    <h3><i class="fa-solid fa-phone"></i></h3>
+                    <p>+821048730714 <br> +959257886455</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="map" id="location">
+        <div class="container-fluid text-center">
+            <h1>OUR LOCATION</h1>
+            <div class="row">
+                <div class="col pb-5">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.0450613912276!2d126.55289058329156!3d37.677402491294536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c7c2f2f85f941%3A0xb6d07afeff9586e9!2zKOyjvCnsl5DsiqTsoJzsnbTquIDroZzrsow!5e0!3m2!1sen!2skr!4v1685111676719!5m2!1sen!2skr"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42638.80979059349!2d13.820525540771515!3d48.0923776368575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773f6dcc19987ad%3A0x71a17dee2555ef0f!2sLambach%2C%20Austria!5e0!3m2!1sen!2skr!4v1685154056568!5m2!1sen!2skr"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
+    </section>
+    <!-- ================= location end============= -->
+    <!-- /* =============== footer start ======== */ -->
+    <section class="footer">
+            <footer class="bg-dark text-center text-white">
+                <!-- Grid container -->
+                <div class="container p-4 pb-0">
+                    <!-- Section: Form -->
+                    <section class="">
+                        <form action="" class="wow slideInRight" data-wow-offset="10"  data-wow-iteration="1">
+                            <!--Grid row-->
+                            <div class="row d-flex justify-content-center">
+                                <!--Grid column-->
+                                <div class="col-auto">
+                                    <p class="pt-2">
+                                        <strong>Subscribe for our newsletter</strong>
+                                    </p>
+                                </div>
+                                <!--Grid column-->
+            
+                                <!--Grid column-->
+                                <div class="col-md-5 col-12">
+                                    <!-- Email input -->
+                                    <div class="form-outline form-white mb-4">
+                                        <input type="email" id="form5Example29" class="form-control" placeholder="Email Address.." />
+                                       
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+            
+                                <!--Grid column-->
+                                <div class="col-auto">
+                                    <!-- Submit button -->
+                                    <button type="submit" class="btn btn-outline-light mb-4">
+                                        Subscribe
+                                    </button>
+                                </div>
+                                <!--Grid column-->
+                            </div>
+                            <!--Grid row-->
+                        </form>
+                    </section>
+                    <!-- Section: Form -->
+                </div>
+                <!-- Grid container -->
+            
+                <!-- Copyright -->
+                <div class="social_icons mt-3">
+                    <a href="" class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="" class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="1.5s"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="2s"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="" class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="2.5s"><i class="fa-brands fa-vk"></i></a>
+                    <a href="" class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="3s"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="" class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="3.5s"><i class="fa-brands fa-viber"></i></a>
+                </div>
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2023 Copyright:
+                    <a class="text-white" href="#"><span style="color:
+                    red" class="fw-bold">HK </span>Global</a>
+                </div>
+                <!-- Copyright -->
+            </footer>
     </section>
 
 
 
 
 
-    <!-- /* ============== form end ========= */ -->
+    
+    <!-- /* =============== footer end =========== */ -->
 
     <script src="./owlcarousel/owl.carousel.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
@@ -1114,12 +1209,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="./imakewebthings-waypoints-34d9f6d/lib/jquery.waypoints.min.js"></script>
     <script src="./Counter-Up-master/jquery.counterup.min.js"></script>
+    <script src="./js/smooth_scroll.js"></script>
+    <script src="./js/wow.min.js"></script>
     <script>
         var typed = new Typed('#typed_text', {
-                strings: ['<b>Hello!</b><b> Welcome to <span class="gg">HK </span> Global !</b>', "<b class='dialog'>Let's Build Your Business Success!</b>"],
+                strings: ['<b> Welcome to <span class="gg">HK </span> Global !</b>'],
                 typeSpeed: 70,
                 loop: true,
             });
+    </script>
+    <script>
+        new WOW().init();
     </script>
     <script src="./magnific_popup/jquery.magnific-popup.min.js" type="text/javascript"></script>
 </body>
